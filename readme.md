@@ -1,6 +1,6 @@
 # CS209 Assignment2
 
-### Data visualisation
+## Data visualisation
 
 Last time, we preprocess the files from your friend, and collect them into a systemically classified, 
 and consistent encoded situation. Then, you want to know some general information of these files. 
