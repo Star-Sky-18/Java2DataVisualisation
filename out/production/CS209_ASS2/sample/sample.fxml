@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#setRoot" text="Set Root" />
+       <TabPane fx:id="first" layoutX="104.0" prefHeight="400.0" prefWidth="499.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <tabs>
+              <Tab text="Genre Statistics">
+                 <content>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <BarChart fx:id="barChart">
+                                <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                </yAxis>
+                            </BarChart>
+                        </children>
+                     </AnchorPane>
+                 </content>
+              </Tab>
+              <Tab text="File Size Statistics">
+                 <content>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="365.0">
+                        <children>
+                            <TabPane fx:id="second" layoutX="93.0" layoutY="21.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        </children>
+                     </AnchorPane>
+                 </content>
+              </Tab>
+          </tabs>
+       </TabPane>
+       <ChoiceBox fx:id="chartType" layoutX="14.0" layoutY="278.0" prefHeight="30.0" prefWidth="82.0" />
+      <Button layoutX="14.0" layoutY="83.0" mnemonicParsing="false" onAction="#setIntervals" prefHeight="30.0" prefWidth="82.0" text="Set Intervals" />
+      <Button layoutX="14.0" layoutY="157.0" mnemonicParsing="false" onAction="#setConfig" prefHeight="30.0" prefWidth="82.0" text="Set Config" />
+   </children>
+</AnchorPane>
