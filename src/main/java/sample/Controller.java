@@ -121,7 +121,7 @@ public class Controller {
         barChart.prefHeightProperty().bind(first.heightProperty().subtract(50));
         yaml = new Yaml();
         loadConfig(new File(defaultPath), true, true);
-        chartType.getItems().addAll("PieChart", "StackedBarChart");
+        chartType.getItems().addAll(supplierMap.keySet());
         chartType.getSelectionModel().selectedItemProperty().addListener((v,ov,nv)->{
             Controller.this.selectedType = nv;
             redraw();
